@@ -46,12 +46,42 @@
       <!-- section -->
       <div class="section">
         <div class="carousel">
-          <h1>MOVIEFLEX</h1>
-          <span> Streaming service</span>
+          <div class="progress-bar"></div>
+          <div class="mySlides fade">
+            <div class="carousel-frame carousel-image1"></div>
+            <div class="text">Movie Toronto</div>
+            <div class="text-sub">
+              Lorem, ipsum dolor sit amet consectet culpa, minima fugiat?
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="carousel-frame carousel-image2"></div>
+            <div class="text">Caption Two</div>
+            <div class="text-sub">
+              Lorem, ipsum dolor sit amet consectet culpa, minima fugiat?
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="carousel-frame carousel-image3"></div>
+            <div class="text">Caption Three</div>
+            <div class="text-sub">
+              Lorem, ipsum dolor sit amet consectet culpa, minima fugiat?
+            </div>
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          <span class="dot dot1" onclick="currentSlide(1)"></span>
+          <span class="dot dot2" onclick="currentSlide(2)"></span>
+          <span class="dot dot3" onclick="currentSlide(3)"></span>
         </div>
+      </div>
+
+      <div class="section">
         <div class="movies"></div>
-      </div> 
-      
+      </div>
 
       <!-- footer -->
       <div class="footer">
@@ -74,5 +104,6 @@
         </div>
       </div>
     </div>
+    <script src="./myscript.js"></script>
   </body>
 </html>
