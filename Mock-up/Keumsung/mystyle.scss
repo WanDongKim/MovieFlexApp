@@ -19,6 +19,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 5;
 
   .main-logo {
     z-index: 2;
@@ -54,20 +55,106 @@ body {
 .section {
   margin-top: 70px;
   height: 100vh;
+  position: relative;
 
   .carousel {
-    padding: 10px;
-    height: 440px;
-    background-image: url("./movie.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50%, 50%;
-  }
+    position: relative;
+    .progress-bar {
+      border-top: 5px solid rgba(235, 8, 8, 0.808);
+      animation: progress;
+    }
 
-  .movies {
-    padding: 10px;
-    // height: 600px;
-    height: 200px;
+    .mySlides {
+      display: none;
+      position: relative;
+
+      &.fade {
+        animation: fade ease 5s;
+      }
+      .text {
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        font-size: 2rem;
+        color: rgba(255, 255, 255, 0.9);
+      }
+      .text-sub {
+        position: absolute;
+        top: 22%;
+        left: 5%;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+    .carousel-frame {
+      padding: 10px;
+      height: 440px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50%, 50%;
+      &.carousel-image1 {
+        background-image: url("./images/movie.jpg");
+      }
+      &.carousel-image2 {
+        background-image: url("./images/movie2.jpg");
+      }
+      &.carousel-image3 {
+        background-image: url("./images/movie3.jpg");
+      }
+    }
+
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 3px;
+      user-select: none;
+
+      &.active,
+      &:hover {
+        background-color: red;
+      }
+    }
+    .next {
+      right: 0;
+    }
+
+    .dot {
+      display: inline-block;
+      color: white;
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      border-radius: 50%;
+      transition: background-color 0.6s ease;
+      position: absolute;
+      top: 90%;
+      left: 50%;
+
+      &.dot1 {
+        left: 47%;
+      }
+      &.dot3 {
+        left: 53%;
+      }
+
+      &.active,
+      &:hover {
+        background-color: rgba(235, 8, 8, 0.808);
+      }
+    }
+
+    .movies {
+      padding: 10px;
+      // height: 600px;
+      height: 200px;
+    }
   }
 }
 
@@ -83,7 +170,6 @@ body {
     padding-top: 20px;
 
     .footer-links {
-      //   border: 1px solid red;
       width: 500px;
       .footer-link {
         width: 150px;
@@ -103,5 +189,14 @@ body {
     padding-top: 40px;
     padding-left: 10px;
     color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
   }
 }
