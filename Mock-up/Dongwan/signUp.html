@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="mystyle.css" />
     <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="signUp.css" />
 
 
     <!-- font -->
@@ -43,34 +44,80 @@
                 </li>
                 <li class="menu">
                         <a href="./signUp.html" > Sign Up</a>
-                      </li>
+                </li>
                 <li class="menu">
-                    <i class="fas fa-search"></i>
+                        <i class="fas fa-search"></i><a>Search</a>
                 </li>
             </ul>
         </div>
 
 
-        <!-- Log in page  -->
-        <div class="login-page">
-
+        <!-- Sign up page  -->
+        <div class="signUp-page">
             <div class="form">
                 <div class="main-logo">
-                    MOVIEFLEX
+                    Welcome to MOVIEFLEX
                 </div>
-                <div class="login-form">
+                <div class="signUp-form">
                     <form>
-                        <input class="loginFormTextBox" type="email" placeholder="username or email" />
-                        <input class="loginFormTextBox" type="password" placeholder="password" />
-                        <button class="loginFormButton" name="btnLogin"><i
-                                class="fas fa fa-sign-in-alt"></i> Login</button>
-                        <p class="message">New to Movieflex? <a href="./signUp.html">Sign up now</a></p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input class="signUpFormTextBox" type="text" placeholder="Last Name" required />
+                            </div>
+                            <div class="col-md-6">
+                                <input class="signUpFormTextBox" type="text" placeholder="First Name" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input class="signUpFormTextBox" type="email" placeholder="Email" required />
+                            </div>
+        
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input class="signUpFormTextBox" type="password" placeholder="Password" required />
+                            </div>
+        
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input class="signUpFormTextBox" type="password" placeholder="Confirm Password" required />
+                            </div>
+        
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                    <button class="signUpFormButton" name="btnSignUp">Join Now</button>
+                                    <p class="message">Already a member? <a href="./login.html">Sign in</a></p>
+
+                            </div>
+
+                        </div>
                     </form>
                 </div>
-
             </div>
         </div>
+       
+        <!-- <div class="login-page">
 
+                <div class="form">
+                    <div class="main-logo">
+                        MOVIEFLEX
+                    </div>
+                    <div class="login-form">
+                        <form>
+                            <input class="signUpFormTextBox" type="email" placeholder="username or email" />
+                            <input class="signUpFormTextBox" type="password" placeholder="password" />
+                            <button class="loginFormButton" name="btnLogin" class="formButton"><i
+                                    class="fas fa fa-sign-in-alt"></i> Login</button>
+                            <p class="message">New to Movieflex? <a href="./register.html">Sign up now</a></p>
+                        </form>
+                    </div>
+    
+                </div>
+            </div> -->
+    
         <!-- footer -->
         <div class="footer">
             <div class="footer-icon">
