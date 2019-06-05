@@ -6,8 +6,8 @@
   padding: 10px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr) [8];
-  grid-template-columns: repeat(8, 1fr);
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
   grid-gap: 20px;
   grid-auto-rows: minmax(200px, auto);
 }
@@ -15,7 +15,7 @@
 .movie-section .movies .movie-card {
   position: relative;
   -webkit-box-shadow: 7px 7px 15px -8px rgba(0, 0, 0, 0.75);
-  box-shadow: 7px 7px 15px -8px rgba(0, 0, 0, 0.75);
+          box-shadow: 7px 7px 15px -8px rgba(0, 0, 0, 0.75);
 }
 
 .movie-section .movies .movie-card .movie-poster {
@@ -54,8 +54,8 @@
     padding: 10px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr) [6];
-    grid-template-columns: repeat(6, 1fr);
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
     grid-gap: 20px;
     grid-auto-rows: minmax(200px, auto);
   }
@@ -69,8 +69,8 @@
     padding: 10px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr) [4];
-    grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     grid-auto-rows: minmax(200px, auto);
   }
@@ -84,8 +84,8 @@
     padding: 10px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr) [2];
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     grid-auto-columns: minmax(50px, auto);
   }
