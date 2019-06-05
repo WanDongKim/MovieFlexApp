@@ -12,7 +12,7 @@ body {
   height: 100%;
 }
 
-.nav {
+.top-nav {
   width: 100%;
   height: 50px;
   background-color: #141414;
@@ -70,7 +70,7 @@ body {
       position: relative;
 
       &.fade {
-        animation: fade ease 5s;
+        animation: fade ease 5s infinite;
       }
       .text {
         position: absolute;
@@ -96,15 +96,12 @@ body {
 
       &.carousel-image1 {
         background-image: url("./images/movie.jpg");
-        animation: fade1 8s infinite;
       }
       &.carousel-image2 {
         background-image: url("./images/movie2.jpg");
-        animation: fade2 8s infinite;
       }
       &.carousel-image3 {
         background-image: url("./images/movie3.jpg");
-        animation: fade3 8s infinite;
       }
     }
 
@@ -160,7 +157,6 @@ body {
 .footer {
   margin-top: 20px;
   position: relative;
-  //   height: 250px;
   .footer-icon {
     i {
       margin: 0 10px;
@@ -218,7 +214,7 @@ body {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 50%, 50%;
-        transition: all ease-in-out 0.5s;
+        transition: all ease 0.5s;
         &:hover {
           background: rgba(20, 20, 20, 0.5);
         }

@@ -1,0 +1,93 @@
+.movie-section {
+  margin-top: 100px;
+}
+
+.movie-section .movies {
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr) [8];
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(200px, auto);
+}
+
+.movie-section .movies .movie-card {
+  position: relative;
+  -webkit-box-shadow: 7px 7px 15px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 7px 15px -8px rgba(0, 0, 0, 0.75);
+}
+
+.movie-section .movies .movie-card .movie-poster {
+  height: 100%;
+  background-image: url("./images/Avengers.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%, 50%;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.movie-section .movies .movie-card .movie-poster:hover {
+  background: rgba(20, 20, 20, 0.5);
+}
+
+.movie-section .movies .movie-card .movie-title {
+  position: absolute;
+  top: 5%;
+  font-size: 0.8rem;
+  left: 10%;
+}
+
+.movie-section .movies .movie-card .movie-summary {
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+}
+
+@media screen and (max-width: 1000px) {
+  .movie-section {
+    margin-top: 100px;
+  }
+  .movie-section .movies {
+    padding: 10px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr) [6];
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(200px, auto);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .movie-section {
+    margin-top: 100px;
+  }
+  .movie-section .movies {
+    padding: 10px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr) [4];
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(200px, auto);
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .movie-section {
+    margin-top: 100px;
+  }
+  .movie-section .movies {
+    padding: 10px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr) [2];
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    grid-auto-columns: minmax(50px, auto);
+  }
+}
+/*# sourceMappingURL=Movies.css.map */

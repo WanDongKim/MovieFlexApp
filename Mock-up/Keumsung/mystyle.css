@@ -13,7 +13,7 @@ body {
   height: 100%;
 }
 
-.nav {
+.top-nav {
   width: 100%;
   height: 50px;
   background-color: #141414;
@@ -23,7 +23,7 @@ body {
   z-index: 5;
 }
 
-.nav .main-logo {
+.top-nav .main-logo {
   z-index: 2;
   position: absolute;
   top: 14px;
@@ -33,22 +33,22 @@ body {
   text-transform: uppercase;
 }
 
-.nav li {
+.top-nav li {
   position: relative;
   display: inline-block;
   margin: 15px 10px;
 }
 
-.nav li:first-child {
+.top-nav li:first-child {
   margin-left: 180px;
 }
 
-.nav li:last-child {
+.top-nav li:last-child {
   float: right;
   margin-right: 10%;
 }
 
-.nav li a {
+.top-nav li a {
   float: left;
   color: white;
   text-decoration: none;
@@ -77,8 +77,8 @@ body {
 }
 
 .section .carousel .mySlides.fade {
-  -webkit-animation: fade ease 5s;
-          animation: fade ease 5s;
+  -webkit-animation: fade ease 5s infinite;
+          animation: fade ease 5s infinite;
 }
 
 .section .carousel .mySlides .text {
@@ -107,20 +107,14 @@ body {
 
 .section .carousel .carousel-frame.carousel-image1 {
   background-image: url("./images/movie.jpg");
-  -webkit-animation: fade1 8s infinite;
-          animation: fade1 8s infinite;
 }
 
 .section .carousel .carousel-frame.carousel-image2 {
   background-image: url("./images/movie2.jpg");
-  -webkit-animation: fade2 8s infinite;
-          animation: fade2 8s infinite;
 }
 
 .section .carousel .carousel-frame.carousel-image3 {
   background-image: url("./images/movie3.jpg");
-  -webkit-animation: fade3 8s infinite;
-          animation: fade3 8s infinite;
 }
 
 .section .carousel .prev,
@@ -257,8 +251,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%, 50%;
-  -webkit-transition: all ease-in-out 0.5s;
-  transition: all ease-in-out 0.5s;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
 }
 
 .movie-section .movies .movie-card .movie-poster:hover {

@@ -1,0 +1,38 @@
+.footer {
+  margin-top: 20px;
+  position: relative;
+
+  .footer-icon {
+    a {
+      color: white;
+
+      i {
+        margin: 0 10px;
+      }
+    }
+  }
+  .footer-support {
+    padding-top: 20px;
+
+    .footer-links {
+      width: 500px;
+      .footer-link {
+        width: 150px;
+        display: inline-block;
+        padding: 5px 10px;
+
+        a {
+          color: rgba(255, 255, 255, 0.5);
+          text-decoration: none;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+  .copyright {
+    font-size: 0.4rem;
+    padding-top: 40px;
+    padding-left: 10px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}

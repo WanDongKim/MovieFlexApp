@@ -1,0 +1,284 @@
+.footer {
+  margin-top: 20px;
+  position: relative;
+}
+
+.footer .footer-icon i {
+  margin: 0 10px;
+}
+
+.footer .footer-support {
+  padding-top: 20px;
+}
+
+.footer .footer-support .footer-links {
+  width: 500px;
+}
+
+.footer .footer-support .footer-links .footer-link {
+  width: 150px;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.footer .footer-support .footer-links .footer-link a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.footer .copyright {
+  font-size: 0.4rem;
+  padding-top: 40px;
+  padding-left: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+  background-color: #141414;
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper {
+  margin: 20px;
+  height: 100%;
+}
+
+.section {
+  margin-top: 70px;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.section .carousel {
+  position: relative;
+}
+
+.section .carousel .progress-bar {
+  border-top: 5px solid rgba(235, 8, 8, 0.808);
+  width: 33.333%;
+}
+
+.section .carousel .mySlides {
+  display: none;
+  position: relative;
+}
+
+.section .carousel .mySlides.fade {
+  -webkit-animation: fade ease 5s infinite;
+          animation: fade ease 5s infinite;
+}
+
+.section .carousel .mySlides .text {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.section .carousel .mySlides .text-sub {
+  position: absolute;
+  top: 22%;
+  left: 5%;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.section .carousel .carousel-frame {
+  padding: 10px;
+  height: 440px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%, 50%;
+}
+
+.section .carousel .carousel-frame.carousel-image1 {
+  background-image: url("./images/movie.jpg");
+}
+
+.section .carousel .carousel-frame.carousel-image2 {
+  background-image: url("./images/movie2.jpg");
+}
+
+.section .carousel .carousel-frame.carousel-image3 {
+  background-image: url("./images/movie3.jpg");
+}
+
+.section .carousel .prev,
+.section .carousel .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  font-size: 18px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 3px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.section .carousel .prev.active, .section .carousel .prev:hover,
+.section .carousel .next.active,
+.section .carousel .next:hover {
+  background-color: red;
+}
+
+.section .carousel .next {
+  right: 0;
+}
+
+.section .carousel .dot {
+  display: inline-block;
+  color: white;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+}
+
+.section .carousel .dot.dot1 {
+  left: 47%;
+}
+
+.section .carousel .dot.dot3 {
+  left: 53%;
+}
+
+.section .carousel .dot.active, .section .carousel .dot:hover {
+  background-color: rgba(235, 8, 8, 0.808);
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+  background-color: #141414;
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper {
+  margin: 20px;
+  height: 100%;
+}
+
+.top-nav {
+  width: 100%;
+  height: 50px;
+  background-color: #141414;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.top-nav .main-logo {
+  z-index: 2;
+  position: absolute;
+  top: 14px;
+  left: 30px;
+  color: red;
+  font-family: "Audiowide", cursive;
+  text-transform: uppercase;
+}
+
+.top-nav li {
+  position: relative;
+  display: inline-block;
+  margin: 15px 10px;
+}
+
+.top-nav li:first-child {
+  margin-left: 180px;
+}
+
+.top-nav li:last-child {
+  float: right;
+  margin-right: 10%;
+}
+
+.top-nav li a {
+  float: left;
+  color: white;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.top-nav {
+  width: 100%;
+  height: 50px;
+  background-color: #141414;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.top-nav .main-logo {
+  z-index: 2;
+  position: absolute;
+  top: 14px;
+  left: 30px;
+  color: red;
+  font-family: "Audiowide", cursive;
+  text-transform: uppercase;
+}
+
+.top-nav li {
+  position: relative;
+  display: inline-block;
+  margin: 15px 10px;
+}
+
+.top-nav li:first-child {
+  margin-left: 180px;
+}
+
+.top-nav li:last-child {
+  float: right;
+  margin-right: 10%;
+}
+
+.top-nav li a {
+  float: left;
+  color: white;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+/*# sourceMappingURL=Master.css.map */

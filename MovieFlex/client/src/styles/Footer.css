@@ -1,0 +1,40 @@
+.footer {
+  margin-top: 20px;
+  position: relative;
+}
+
+.footer .footer-icon a {
+  color: white;
+}
+
+.footer .footer-icon a i {
+  margin: 0 10px;
+}
+
+.footer .footer-support {
+  padding-top: 20px;
+}
+
+.footer .footer-support .footer-links {
+  width: 500px;
+}
+
+.footer .footer-support .footer-links .footer-link {
+  width: 150px;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.footer .footer-support .footer-links .footer-link a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.footer .copyright {
+  font-size: 0.4rem;
+  padding-top: 40px;
+  padding-left: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+/*# sourceMappingURL=Footer.css.map */
