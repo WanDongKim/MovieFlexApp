@@ -6,13 +6,13 @@ class Footer extends Component {
       <div className="footer">
         <div className="footer-icon">
           <a href="http://">
-            <i className="fab fa-facebook-f" />
+            <i className="fa fa-facebook-f" />
           </a>
           <a href="http://#">
-            <i className="fab fa-instagram" />
+            <i className="fa fa-instagram" />
           </a>
           <a href="http://#">
-            <i className="fab fa-twitter" />
+            <i className="fa fa-twitter" />
           </a>
         </div>
 
