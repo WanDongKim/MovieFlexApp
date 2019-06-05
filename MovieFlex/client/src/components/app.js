@@ -1,10 +1,16 @@
 import React from 'react';
-
+import Header from './base/header';
+import Footer from './base/Footer';
+import Movies from "./Movies";
+// import MainCarousel from "./MainCarousel";
 export default class App extends React.Component{
     render(){
         return(
         <div>
-            <h1>MovieFlex Application</h1>
+            <Header/>
+            {/* <MainCarousel /> */}
+            <Movies />
+            <Footer/>
         </div>
         )
 
