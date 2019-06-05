@@ -5,6 +5,7 @@ body {
   color: white;
   background-color: #141414;
   height: 100%;
+  width: 100%;
 }
 
 .wrapper {
@@ -56,8 +57,9 @@ body {
 
 .section {
   margin-top: 70px;
-  height: 100vh;
+  height: 100%;
   position: relative;
+  width: 100%;
 }
 
 .section .carousel {
@@ -66,8 +68,7 @@ body {
 
 .section .carousel .progress-bar {
   border-top: 5px solid rgba(235, 8, 8, 0.808);
-  -webkit-animation: progress;
-          animation: progress;
+  width: 33.333%;
 }
 
 .section .carousel .mySlides {
@@ -106,14 +107,20 @@ body {
 
 .section .carousel .carousel-frame.carousel-image1 {
   background-image: url("./images/movie.jpg");
+  -webkit-animation: fade1 8s infinite;
+          animation: fade1 8s infinite;
 }
 
 .section .carousel .carousel-frame.carousel-image2 {
   background-image: url("./images/movie2.jpg");
+  -webkit-animation: fade2 8s infinite;
+          animation: fade2 8s infinite;
 }
 
 .section .carousel .carousel-frame.carousel-image3 {
   background-image: url("./images/movie3.jpg");
+  -webkit-animation: fade3 8s infinite;
+          animation: fade3 8s infinite;
 }
 
 .section .carousel .prev,
@@ -170,12 +177,8 @@ body {
   background-color: rgba(235, 8, 8, 0.808);
 }
 
-.section .carousel .movies {
-  padding: 10px;
-  height: 200px;
-}
-
 .footer {
+  margin-top: 20px;
   position: relative;
 }
 
@@ -225,6 +228,99 @@ body {
   }
   to {
     opacity: 1;
+  }
+}
+
+.movie-section {
+  margin-top: 20px;
+}
+
+.movie-section .movies {
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(200px, auto);
+}
+
+.movie-section .movies .movie-card {
+  position: relative;
+  -webkit-box-shadow: 7px 7px 15px -8px rgba(0, 0, 0, 0.75);
+          box-shadow: 7px 7px 15px -8px rgba(0, 0, 0, 0.75);
+}
+
+.movie-section .movies .movie-card .movie-poster {
+  height: 100%;
+  background-image: url("./images/Avengers.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%, 50%;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.movie-section .movies .movie-card .movie-poster:hover {
+  background: rgba(20, 20, 20, 0.5);
+}
+
+.movie-section .movies .movie-card .movie-title {
+  position: absolute;
+  top: 5%;
+  font-size: 0.8rem;
+  left: 10%;
+}
+
+.movie-section .movies .movie-card .movie-summary {
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+}
+
+@media screen and (max-width: 1000px) {
+  .movie-section {
+    margin-top: 20px;
+  }
+  .movie-section .movies {
+    padding: 10px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(200px, auto);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .movie-section {
+    margin-top: 20px;
+  }
+  .movie-section .movies {
+    padding: 10px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(200px, auto);
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .movie-section {
+    margin-top: 20px;
+  }
+  .movie-section .movies {
+    padding: 10px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    grid-auto-columns: minmax(50px, auto);
   }
 }
 /*# sourceMappingURL=mystyle.css.map */
