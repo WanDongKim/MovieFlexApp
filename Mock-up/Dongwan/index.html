@@ -1,1 +1,117 @@
-<!-- Mockup -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MovieFlex</title>
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/> -->
+    <!-- style sheet -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="mystyle.css" />
+
+
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Audiowide|Nunito+Sans|Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/f59e7a2f5f.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="nav">
+        <div class="main-logo">
+          MOVIEFLEX
+        </div>
+        <ul class="navbar">
+          <li class="menu">
+            <a href="#" class="firstAnchor"> Home</a>
+          </li>
+          <li class="menu">
+            <a href="#"> List</a>
+          </li>
+          <li class="menu">
+            <a href="#"> Account</a>
+          </li>
+          <li class="menu">
+            <a href="./login.html" class="login"> Login</a>
+          </li>
+          <li class="menu">
+            <i class="fas fa-search"></i>
+          </li>
+        </ul>
+      </div>
+
+      <!-- section -->
+      <div class="section">
+        <div class="carousel">
+          <div class="progress-bar1"></div>
+          <div class="mySlides fade">
+            <div class="carousel-frame carousel-image1"></div>
+            <div class="text">Movie Toronto</div>
+            <div class="text-sub">
+              Lorem, ipsum dolor sit amet consectet culpa, minima fugiat?
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="carousel-frame carousel-image2"></div>
+            <div class="text">Caption Two</div>
+            <div class="text-sub">
+              Lorem, ipsum dolor sit amet consectet culpa, minima fugiat?
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="carousel-frame carousel-image3"></div>
+            <div class="text">Caption Three</div>
+            <div class="text-sub">
+              Lorem, ipsum dolor sit amet consectet culpa, minima fugiat?
+            </div>
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          <span class="dot dot1" onclick="currentSlide(1)"></span>
+          <span class="dot dot2" onclick="currentSlide(2)"></span>
+          <span class="dot dot3" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="movies"></div>
+      </div>
+
+      <!-- footer -->
+      <div class="footer">
+        <div class="footer-icon">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-twitter"></i>
+        </div>
+
+        <div class="footer-support">
+          <div class="footer-links">
+            <div class="footer-link"><a href="#">Customer Service</a></div>
+            <div class="footer-link"><a href="#">Terms and Condition</a></div>
+            <div class="footer-link"><a href="#">Contact Detail</a></div>
+            <div class="footer-link"><a href="#">Account</a></div>
+          </div>
+        </div>
+        <div class="copyright">
+          Copyright© 2019 MOVIEFLEX toronto All rights reserved.
+        </div>
+      </div>
+    </div>
+    <script src="./myscript.js"></script>
+
+    <!-- Bootstrap JS -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
+  </body>
+</html>
