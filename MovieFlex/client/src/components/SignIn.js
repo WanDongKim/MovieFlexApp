@@ -5,19 +5,19 @@ import '../styles/SignIn.css';
 class SignIn extends Component {
   render() {
     return (
-        <div class="login-page">
+        <div className="login-page">
 
-        <div class="form">
-            <div class="main-logo">
+        <div className="form">
+            <div className="main-logo">
                 MOVIEFLEX
             </div>
-            <div class="login-form">
+            <div className="login-form">
                 <form>
-                    <input class="loginFormTextBox" type="email" placeholder="username or email" />
-                    <input class="loginFormTextBox" type="password" placeholder="password" />
-                    <button class="loginFormButton" name="btnLogin"><i
-                            class="fas fa fa-sign-in-alt"></i> Login</button>
-                    <p class="message">New to Movieflex? <a><Link to='/SignUp'>Sign up now</Link></a></p>
+                    <input className="loginFormTextBox" type="email" placeholder="username or email" />
+                    <input className="loginFormTextBox" type="password" placeholder="password" />
+                    <button className="loginFormButton" name="btnLogin"><i
+                            className="fas fa fa-sign-in-alt"></i> Login</button>
+                    <p className="message">New to Movieflex?<Link to='/SignUp'>Sign up now</Link></p>
                 </form>
 
             </div>

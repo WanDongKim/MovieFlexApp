@@ -5,43 +5,43 @@ import '../styles/SignUp.css';
 class SignUp extends Component {
   render() {
     return (
-        <div class="signUp-page">
-        <div class="form">
-            <div class="main-logo">
+        <div className="signUp-page">
+        <div className="form">
+            <div className="main-logo">
                 Welcome to MOVIEFLEX
             </div>
-            <div class="signUp-form">
+            <div className="signUp-form">
                 <form>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <input class="signUpFormTextBox" type="text" placeholder="Last Name" required />
+                    <div className="row">
+                        <div className="col-md-6">
+                            <input className="signUpFormTextBox" type="text" placeholder="Last Name" required />
                         </div>
-                        <div class="col-md-6">
-                            <input class="signUpFormTextBox" type="text" placeholder="First Name" required />
+                        <div className="col-md-6">
+                            <input className="signUpFormTextBox" type="text" placeholder="First Name" required />
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <input class="signUpFormTextBox" type="email" placeholder="Email" required />
+                    <div className="row">
+                        <div className="col-md-12">
+                            <input className="signUpFormTextBox" type="email" placeholder="Email" required />
                         </div>
     
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <input class="signUpFormTextBox" type="password" placeholder="Password" required />
+                    <div className="row">
+                        <div className="col-md-12">
+                            <input className="signUpFormTextBox" type="password" placeholder="Password" required />
                         </div>
     
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <input class="signUpFormTextBox" type="password" placeholder="Confirm Password" required />
+                    <div className="row">
+                        <div className="col-md-12">
+                            <input className="signUpFormTextBox" type="password" placeholder="Confirm Password" required />
                         </div>
     
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                                <button class="signUpFormButton" name="btnSignUp">Join Now</button>
-                                <p class="message">Already a member? <a><Link to='/SignIn'>Sign in</Link></a></p>
+                    <div className="row">
+                        <div className="col-md-12">
+                                <button className="signUpFormButton" name="btnSignUp">Join Now</button>
+                                <p className="message">Already a member? <Link to='/SignIn'>Sign in</Link></p>
                         </div>
 
                     </div>
