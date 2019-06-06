@@ -1,4 +1,6 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 export default class Header extends React.Component {
   render() {
     return (
@@ -6,20 +8,17 @@ export default class Header extends React.Component {
         <div className="main-logo">MOVIEFLEX</div>
         <ul className="top-navbar">
           <li className="menu">
-            <a href="http://#" className="firstAnchor">
-              Home
-            </a>
+            <Link to='/' className="firstAnchor">Home</Link>
           </li>
           <li className="menu">
-            <a href="http://#"> List</a>
+          <Link to='/'>List</Link>
           </li>
           <li className="menu">
-            <a href="http://#"> Account</a>
+          <Link to='/'>Account</Link>
           </li>
           <li className="menu">
-            <a href="http://#" className="login">
-              Login
-            </a>
+            <Link to='/SignIn' className="login">Login</Link>
+              
           </li>
           <li className="menu">
             <i className="fa fa-search" />
