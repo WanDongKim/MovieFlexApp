@@ -2,7 +2,6 @@ import React from "react";
 import Header from "./base/Header";
 import Footer from "./base/Footer";
 import Movies from "./Movies";
-import Movie from './Movie';
 import SignIn from './SignIn.js';
 import SignUp from './SignUp';
 
@@ -15,7 +14,7 @@ export default class App extends React.Component {
       <Router>
         <div className="wrapper">
           <Header/>
-          <Route exact path="/" component={Movie} />
+          <Route exact path="/" component={Movies} />
           
 
 
