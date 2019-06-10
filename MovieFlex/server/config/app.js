@@ -4,43 +4,53 @@ let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
-
-
+let cors = require('cors');
+var bodyParser = require('body-parser');
 // modules for authentication
 let session = require('express-session');
 let passport = require('passport');
+
+let passportJWT = require('passport-jwt');
+let JWTStrategy = passportJWT.Strategy;
+let ExtractJWT = passportJWT.ExtractJwt;
+
+
 let passportlocal = require('passport-local');
 let localStrategy = passportlocal.Strategy;
 let flash = require('connect-flash');
 
 
-// //database setup
-// let mongoose = require('mongoose');
-// let DB = require('./db');
+//database setup
+let mongoose = require('mongoose');
+let DB = require('./db');
 
-// // point Mongoose to the DB URI
-// mongoose.connect(DB.URI);
+// point Mongoose to the DB URI
+mongoose.connect(DB.URI, { useNewUrlParser: true });
 
-// let mongoDB = mongoose.connection;
-// mongoDB.on('error', console.error.bind(console, 'Connection Error:'));
-// mongoDB.once('open', () => {
-//   console.log("Connected to MongoDB...");
-// })
+let mongoDB = mongoose.connection;
+mongoDB.on('error', console.error.bind(console, 'Connection Error:'));
+mongoDB.once('open', () => {
+  console.log("Connected to MongoDB...");
+})
 
-// let indexRouter = require('../routes/index');
+let indexRouter = require('../routes/index');
 
 let app = express();
 
 // // view engine setup
-// app.set('views', path.join(__dirname, '../views'));
-// app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '../views'));
+app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 app.use(express.static(path.join(__dirname, '../../client/build')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
+
+app.use(cors());
 
 // setup express-session
 app.use(session({
@@ -58,21 +68,36 @@ app.use(passport.session());
 
 // passport user configuration
 
-// // Create a User model
-// let userModel = require('../models/user');
-// let User = userModel.User;
+// Create a User model
+let userModel = require('../models/user');
+let User = userModel.User;
 
-// // implement a User authentication strategy
-// passport.use(User.createStrategy());
+// implement a User authentication strategy
+passport.use(User.createStrategy());
 
-// // serialize and deserialize the User info
-// passport.serializeUser(User.serializeUser());
-// passport.deserializeUser(User.deserializeUser()); 
+// serialize and deserialize the User info
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser()); 
 
+// this part verifies that the token is being sent by the user and is valid
+let jwtOptions = {};
+jwtOptions.jwtFromRequest = ExtractJWT.fromAuthHeaderAsBearerToken();
+jwtOptions.secretOrKey = DB.secret;
 
-// app.use('/', indexRouter);
-// app.use('/contact-list', contactRouter);
-// app.use('/about',aboutRouter);
+let strategy = new JWTStrategy(jwtOptions, (jwt_payload, done) =>{
+  User.findById(jwt_payload.id)
+    .then(user => {
+      return done(null, user);
+    })
+    .catch(err =>{
+      return done(err, false);
+    });
+});
+
+passport.use(strategy);
+
+app.use('/api', indexRouter);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
