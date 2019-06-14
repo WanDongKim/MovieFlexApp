@@ -16,11 +16,12 @@
   position: relative;
   -webkit-box-shadow: 7px 7px 15px -8px rgba(0, 0, 0, 0.75);
           box-shadow: 7px 7px 15px -8px rgba(0, 0, 0, 0.75);
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
 }
 
 .movie-section .movies .movie-card .movie-poster {
   height: 100%;
-  background-image: url("../assets/images/Avengers.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%, 50%;
@@ -29,21 +30,35 @@
 }
 
 .movie-section .movies .movie-card .movie-poster:hover {
-  background: rgba(20, 20, 20, 0.5);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .movie-section .movies .movie-card .movie-title {
+  background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
+  line-height: 14px;
   top: 5%;
-  font-size: 0.8rem;
+  font-size: 1rem;
   left: 10%;
+  right: 10%;
+  text-shadow: 7px 7px 15px -8px rgba(0, 0, 0, 0.75);
 }
 
 .movie-section .movies .movie-card .movie-summary {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   position: absolute;
   bottom: 5%;
   left: 10%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.movie-section .movies .movie-card .movie-summary:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 @media screen and (max-width: 1000px) {
@@ -72,11 +87,11 @@
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
-    grid-auto-rows: minmax(200px, auto);
+    grid-auto-rows: minmax(250px, auto);
   }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 650px) {
   .movie-section {
     margin-top: 100px;
   }
@@ -86,8 +101,23 @@
     display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    grid-auto-columns: minmax(50px, auto);
+    grid-gap: 15px;
+    grid-auto-rows: minmax(300px, auto);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .movie-section {
+    margin-top: 100px;
+  }
+  .movie-section .movies {
+    padding: 10px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    grid-auto-rows: minmax(250px, auto);
   }
 }
 /*# sourceMappingURL=Movies.css.map */
